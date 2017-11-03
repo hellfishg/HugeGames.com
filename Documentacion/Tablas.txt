@@ -1,0 +1,10 @@
+Tabla					PK
+Juegos					nombre_juego
+GeneroXjuego			nombre_juego, nombre_genero
+Generos					nombre_genero
+DescuentoXfecha			cod_descuento, fecha_inicio, fecha_fin
+Ventas					cod_venta
+PackJuegos(5 juegos)	cod_pack
+Usuario					nro_usuario
+VentasXusuario			nro_usuario, cod_venta
+VentasXjuego			cod_venta, nombre_juego
