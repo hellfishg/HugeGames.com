@@ -28,4 +28,8 @@ public partial class Home : System.Web.UI.MasterPage
     {
         Server.Transfer("Perfil.aspx");
     }
+    protected void btnHome_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("Home.aspx");
+    }
 }
