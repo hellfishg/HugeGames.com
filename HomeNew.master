@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HomeNew.master.cs" Inherits="HomeNew" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shards Demo - A Modern UI Toolkit for Web Makers</title>
+    <meta name="description" content="HugeGames website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Theme-->
+    <link rel="stylesheet" href="dist/css/main-demo.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="sticky-header active">
+            <div class="container">
+                <div class="row">
+                    <a href="HomeNew.aspx" class="logo">
+                        <h3 class="w-100">HugeGames</h3>
+                    </a>
+                    <div class="ml-auto actions-wrapper">
+                        <div class="header-actions"><a href="LoginNew.aspx" class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Iniciar Sesión</a></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <a href="PacksNew.aspx"><i class="fa fa-cart-arrow-down"></i>&nbsp;Pack de ofertas</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="CatalogoNew.aspx"><i class="fa fa-gamepad"></i>&nbsp;Catálogo de juegos</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="#"><i class="fa fa-shopping-cart"></i>&nbsp;Carrito de compras</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="content clearfix">
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <footer class="main-footer py-5">
+                <p class="text-muted text-center small p-0 mb-4">© Copyright 2017 — HugeGames</p>
+                <div class="social d-table ml-auto mr-auto"><a class="twitter mx-3 h4" href="#" target="_blank"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span> </a><a class="facebook mx-3 h4" href="#" target="_blank"><i class="fa fa-facebook"></i><span class="sr-only">Facebook <span></span></span></a><a class="github mx-3 h4" href="https://github.com/hellfishg/hugegames.com" target="_blank"><i class="fa fa-github"></i><span class="sr-only">Repositorio del proyecto</span></a></div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+        <script src="dist/js/shards.min.js"></script>
+        <script src="dist/js/main.min.js"></script>
+        <asp:ContentPlaceHolder ID="scripts" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
