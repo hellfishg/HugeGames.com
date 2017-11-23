@@ -37,7 +37,7 @@
                         <a href="CatalogoNew.aspx"><i class="fa fa-gamepad"></i>&nbsp;Catálogo de juegos</a>
                     </div>
                     <div class="col-md-4 text-center">
-                        <a href="#"><i class="fa fa-shopping-cart"></i>&nbsp;Carrito de compras</a>
+                        <a href="CarritoComprasNew.aspx"><i class="fa fa-shopping-cart"></i>&nbsp;Carrito de compras</a>
                     </div>
                 </div>
             </div>

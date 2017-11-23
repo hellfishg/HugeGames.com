@@ -16,7 +16,7 @@
                         <label>Contraseña</label>
                         <input type="password" class="form-control" placeholder="Tu clave"/>
                     </div>
-                    <button type="button" class="btn btn-primary btn-sm pull-right">Iniciar sesión</button>
+                    <button type="button" class="btn btn-primary btn-sm pull-right"><a href="PerfilNew.aspx">Ir al perfil</button>
                 </div>
             </div>
         </div>
