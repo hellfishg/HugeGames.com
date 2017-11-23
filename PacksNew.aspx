@@ -10,7 +10,7 @@
                     <h5>RPG</h5>
                 </div>
                 <div class="card-body">
-                    <div class="row d-flex justify-content-center"">
+                    <div class="row d-flex justify-content-center">
                         <div class="col-md-2">
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
