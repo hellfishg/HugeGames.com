@@ -20,6 +20,10 @@
                         <li class="list-group-item"><i class="fa fa-gamepad"></i>&nbsp;Juego 3&nbsp;&nbsp;<i class="fa fa-usd"></i>200</li>
                     </ul>
                 </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-primary btn-sm pull-right"><i class="fa fa-shopping-cart"></i></button>
+                  
+                </div>
             </div>
         </div>
         <div class="col-md-2 d-flex justify-content-center">
