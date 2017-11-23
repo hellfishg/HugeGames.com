@@ -10,7 +10,7 @@
                     <div class="card mb-3">
                         <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                         <div class="card-body">
-                            <h6><a href="JuegoNew.aspx">Aprobando con fernandez</a></h6>
+                            <h6><a href="JuegoNew.aspx">For Honor</a></h6>
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                     <div class="card mb-3">
                         <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                         <div class="card-body">
-                            <h6><a href="JuegoNew.aspx">Aprobando con fernandez</a></h6>
+                            <h6><a href="JuegoNew.aspx">FIFA 12</a></h6>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="card mb-3">
                         <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                         <div class="card-body">
-                            <h6><a href="JuegoNew.aspx">Aprobando con fernandez</a></h6>
+                            <h6><a href="JuegoNew.aspx">FIFA 14</a></h6>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="card mb-3">
                         <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                         <div class="card-body">
-                            <h6><a href="JuegoNew.aspx">Aprobando con fernandez</a></h6>
+                            <h6><a href="JuegoNew.aspx">FIFA 15</a></h6>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="card mb-3">
                         <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                         <div class="card-body">
-                            <h6><a href="JuegoNew.aspx">Aprobando con fernandez</a></h6>
+                            <h6><a href="JuegoNew.aspx">FIFA 16</a></h6>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="card mb-3">
                         <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                         <div class="card-body">
-                            <h6><a href="JuegoNew.aspx">Aprobando con fernandez</a></h6>
+                            <h6><a href="JuegoNew.aspx">FIFA 17</a></h6>
                         </div>
                     </div>
                 </div>

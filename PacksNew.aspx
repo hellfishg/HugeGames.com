@@ -15,7 +15,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                                 <div class="card-body">
-                                    <h6 class="card-title">Aprobando con fernandez</h6>
+                                    <h6 class="card-title">Super Mario 3</h6>
                                 </div>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                                 <div class="card-body">
-                                    <h6 class="card-title">Aprobando con fernandez 2. El regreso</h6>
+                                    <h6 class="card-title">FIFA 12</h6>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                                 <div class="card-body">
-                                    <h6 class="card-title">Aprobando con fernandez 3. La tercera es la vencida</h6>
+                                    <h6 class="card-title">A jugar con Hugo</h6>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                                 <div class="card-body">
-                                    <h6 class="card-title">Aprobando con fernandez 4. La wea imposible</h6>
+                                    <h6 class="card-title">Word of Warcraft</h6>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                                 <div class="card-body">
-                                    <h6 class="card-title">Aprobando con fernandez 5. GG</h6>
+                                    <h6 class="card-title">Dragon Ball Z </h6>
                                 </div>
                             </div>
                         </div>
