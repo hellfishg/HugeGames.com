@@ -11,31 +11,38 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" class="form-control" placeholder="Tu Nombre" />
+                        <label>Usuario</label>
+                        <input type="text" class="form-control" placeholder="Tu Nombre" runat="server" id="txtUsuario" disabled="disabled" />
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Tu Email" />
+                        <input type="email" class="form-control" placeholder="Tu Email" runat="server" id="txtEmail" />
                     </div>
                     <div class="jumbotron mb-0">
                         <h4 class="display-6"><i class="fa fa-credit-card"></i>&nbsp;Información de tu tarjeta</h4>
-                        <p class="lead text-center font-weight-bold">XXXX&nbsp;&nbsp;XXXX&nbsp;&nbsp;XXXX&nbsp;&nbsp;1234</p>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control lead text-center font-weight-bold" runat="server" id="txtNumTarjeta" />
+                            </div>
+                        </div>
                         <hr class="my-4">
-                        <p class="text-center">VISA</p>
-                        <button type="button" class="btn btn-black btn-sm pull-right">Actualizar</button>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control text-center" runat="server" id="txtNombreTarjeta" />
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Tu Clave" />
+                        <input type="password" class="form-control" placeholder="Tu Clave" runat="server" id="txtPwd" />
                     </div>
                     <div class="form-group">
                         <label>Repetir Contraseña</label>
-                        <input type="text" class="form-control" placeholder="Repetir Clave" />
+                        <input type="text" class="form-control" placeholder="Repetir Clave" runat="server" id="txtRPwd" />
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="button" class="btn btn-primary">Actualizar datos</button>
+                    <button type="button" class="btn btn-primary" runat="server" id="btnDatos" onserverclick="btnDatos_ServerClick">Actualizar datos</button>
                 </div>
             </div>
         </div>
