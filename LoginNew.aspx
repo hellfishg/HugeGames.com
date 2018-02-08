@@ -7,16 +7,16 @@
         <div class="col-md-8">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-6 text-center mb-3">Inicia sesión para continuar</h1>
+                    <h1 class="display-6 text-center mb-3" runat="server" id="lblEstado">Inicia sesión para continuar</h1>
                     <div class="form-group">
                         <label>Usuario</label>
-                        <input type="email" class="form-control" placeholder="Tu email"/>
+                        <input type="email" class="form-control" placeholder="Tu email" runat="server" id="txtEmail"/>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Tu clave"/>
+                        <input type="password" class="form-control" placeholder="Tu clave" runat="server" id="txtPwd"/>
                     </div>
-                    <a class="btn btn-primary btn-sm pull-right" href="PerfilNew.aspx" role="button">Ir a perfil</a>
+                    <button type="button" class="btn btn-primary btn-sm pull-right" runat="server" id="btnLogin" onserverclick="btnLogin_ServerClick"></button>
                 </div>
             </div>
         </div>
