@@ -25,9 +25,18 @@
                     <a href="HomeNew.aspx" class="logo">
                         <h3 class="w-100">HugeGames</h3>
                     </a>
+                    <% if (Usr.IsLoged)
+                        { %>
+                    <div class="ml-auto actions-wrapper">
+                        <div class="header-actions"><a href="PerfilNew.aspx" class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Mi Perfil</a></div>
+                    </div>
+                    <%  }
+                        else
+                        { %>
                     <div class="ml-auto actions-wrapper">
                         <div class="header-actions"><a href="LoginNew.aspx" class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Iniciar Sesión</a></div>
                     </div>
+                    <% } %>
                 </div>
                 <div class="row">
                     <div class="col-md-4 text-center">
