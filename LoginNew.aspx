@@ -10,13 +10,13 @@
                     <h1 class="display-6 text-center mb-3" runat="server" id="lblEstado">Inicia sesión para continuar</h1>
                     <div class="form-group">
                         <label>Usuario</label>
-                        <input type="email" class="form-control" placeholder="Tu email" runat="server" id="txtEmail"/>
+                        <input type="email" class="form-control" placeholder="Tu usuario" runat="server" id="txtEmail"/>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
                         <input type="password" class="form-control" placeholder="Tu clave" runat="server" id="txtPwd"/>
                     </div>
-                    <button type="button" class="btn btn-primary btn-sm pull-right" runat="server" id="btnLogin" onserverclick="btnLogin_ServerClick"></button>
+                    <button type="button" class="btn btn-primary btn-sm pull-right" runat="server" id="btnLogin" onserverclick="btnLogin_ServerClick">Acceder</button>
                 </div>
             </div>
         </div>

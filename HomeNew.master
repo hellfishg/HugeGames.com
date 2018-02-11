@@ -4,16 +4,17 @@
 
 <html>
 <head runat="server">
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>HugeGames.com</title>
-    <meta name="description" content="HugeGames website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HugeGames website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!--Theme-->
     <link rel="stylesheet" href="dist/css/main-demo.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -63,11 +64,22 @@
                 <div class="social d-table ml-auto mr-auto"><a class="twitter mx-3 h4" href="#" target="_blank"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span> </a><a class="facebook mx-3 h4" href="#" target="_blank"><i class="fa fa-facebook"></i><span class="sr-only">Facebook <span></span></span></a><a class="github mx-3 h4" href="https://github.com/hellfishg/hugegames.com" target="_blank"><i class="fa fa-github"></i><span class="sr-only">Repositorio del proyecto</span></a></div>
             </footer>
         </div>
+        <!--Scripts-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.js"></script>
         <script src="dist/js/shards.min.js"></script>
         <script src="dist/js/main.min.js"></script>
+        <script>
+            function showMessage(title, content, type) {
+                swal(
+                    title,
+                    content,
+                    type
+                )
+            }
+        </script>
         <asp:ContentPlaceHolder ID="scripts" runat="server">
         </asp:ContentPlaceHolder>
     </form>

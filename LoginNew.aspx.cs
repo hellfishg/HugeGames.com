@@ -21,7 +21,9 @@ public partial class LoginNew : System.Web.UI.Page
 
         var ds = objDB.ExecuteSP("[UP_HG_Usuarios_Login]", ref stResult, dic);
 
-        if (stResult != "OK") lblEstado.InnerHtml = "Error de credenciales";
+        var utilJS = new clsUtilityJS(this);
+
+        if (stResult != "OK") utilJS.swal("Error", "Error de credenciales", "error");
         else
         {
             var usr = new clsUsuario()
@@ -32,7 +34,7 @@ public partial class LoginNew : System.Web.UI.Page
             };
 
             Session["sUser"] = usr;
-            Response.Redirect("PerfilNew.aspx");
+            Response.Redirect("CatalogoNew.aspx");
         }
     }
 }

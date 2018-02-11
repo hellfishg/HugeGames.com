@@ -56,9 +56,10 @@ public partial class PerfilNew : System.Web.UI.Page
 
         var ds = objDB.ExecuteSP("[UP_HG_Usuarios_ABM]", ref stResult, dic);
 
-        if (stResult == "OK")
-        {
+        var utilJS = new clsUtilityJS(this);
 
-        }
+        utilJS.swal((stResult == "OK") ? "Aviso" : "Error",
+            clsDB.ifNullNeedString(ds.Tables[0].Rows[0][1]).ToString(),
+            (stResult == "OK") ? "success" : "error");
     }
 }
