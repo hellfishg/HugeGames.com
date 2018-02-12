@@ -10,6 +10,7 @@ public class clsUsuario
 {
     public string User { get; set; }
     public string Email { get; set; }
+    public int Perfil { get; set; }
     public bool IsLoged { get; set; }
     public clsUsuario()
     {
