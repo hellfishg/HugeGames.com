@@ -7,14 +7,20 @@
         <div class="col-md-8">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-6 text-center mb-3" runat="server" id="lblEstado">Inicia sesión para continuar</h1>
+                    <h1 class="display-6 text-center mb-3">Inicia sesión para continuar</h1>
                     <div class="form-group">
                         <label>Usuario</label>
-                        <input type="email" class="form-control" placeholder="Tu usuario" runat="server" id="txtEmail"/>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input type="email" class="form-control" placeholder="Tu usuario" runat="server" id="txtEmail" />
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Tu clave" runat="server" id="txtPwd"/>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                            <input type="password" class="form-control" placeholder="Tu clave" runat="server" id="txtPwd" />
+                        </div>
                     </div>
                     <button type="button" class="btn btn-primary btn-sm pull-right" runat="server" id="btnLogin" onserverclick="btnLogin_ServerClick">Acceder</button>
                 </div>

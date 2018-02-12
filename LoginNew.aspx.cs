@@ -30,6 +30,7 @@ public partial class LoginNew : System.Web.UI.Page
             {
                 User = clsDB.ifNullNeedString(ds.Tables[0].Rows[0]["NombreUser_USU"]).ToString(),
                 Email = clsDB.ifNullNeedString(ds.Tables[0].Rows[0]["Mail_USU"]).ToString(),
+                Perfil = 2,
                 IsLoged = true
             };
 
