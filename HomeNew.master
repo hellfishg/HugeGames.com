@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!--Theme-->
+    <link rel="stylesheet" href="dist/css/animate.css">
+    <link rel="stylesheet" href="dist/css/shards.min.css">
     <link rel="stylesheet" href="dist/css/main-demo.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -20,7 +22,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="sticky-header active">
+        <header class="sticky-header active animated fadeInDown">
             <div class="container">
                 <div class="row">
                     <a href="HomeNew.aspx" class="logo">
@@ -29,13 +31,18 @@
                     <% if (Usr.IsLoged)
                         { %>
                     <div class="ml-auto actions-wrapper">
-                        <div class="header-actions"><a href="PerfilNew.aspx" class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Mi Perfil</a></div>
+                        <div class="header-actions">
+                            <a href='<%= (Usr.Perfil == 1) ? "PerfilAdminNew.aspx" : "PerfilNew.aspx" %>' class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Mi Perfil</a>
+                            <button type="button" class="btn documentation btn-outline-light btn-pill ml-1" id="btnSesion" runat="server" onserverclick="btnSesion_ServerClick"><i class="fa fa-times mr-1"></i>Cerrar sesión</button>
+                        </div>
                     </div>
                     <%  }
                         else
                         { %>
                     <div class="ml-auto actions-wrapper">
-                        <div class="header-actions"><a href="LoginNew.aspx" class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Iniciar Sesión</a></div>
+                        <div class="header-actions">
+                            <asp:DropDownList runat="server" ID="ddlLogin" CssClass="custom-select" AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged"></asp:DropDownList>
+                        </div>
                     </div>
                     <% } %>
                 </div>
@@ -54,7 +61,7 @@
         </header>
         <div class="page-content">
             <div class="content clearfix">
-                <div class="container">
+                <div class="container animated fadeInUp">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
