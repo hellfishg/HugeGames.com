@@ -12,33 +12,63 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Usuario</label>
-                        <input type="text" class="form-control" placeholder="Tu Nombre" runat="server" id="txtUsuario" disabled="disabled" />
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Tu Nombre" runat="server" id="txtUsuario" disabled="disabled" />
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Tu Email" runat="server" id="txtEmail" />
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                            <input type="email" class="form-control" placeholder="Tu Email" runat="server" id="txtEmail" />
+                        </div>
                     </div>
                     <div class="jumbotron mb-0">
                         <h4 class="display-6"><i class="fa fa-credit-card"></i>&nbsp;Información de tu tarjeta</h4>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-5">
-                                <input type="text" class="form-control lead text-center font-weight-bold" runat="server" id="txtNumTarjeta" />
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-credit-card"></i>
+                                    </span>
+                                    <input type="text" class="form-control lead text-center font-weight-bold" runat="server" id="txtNumTarjeta" />
+                                </div>
                             </div>
                         </div>
                         <hr class="my-4">
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-5">
-                                <input type="text" class="form-control text-center" runat="server" id="txtNombreTarjeta" />
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-credit-card-alt"></i>
+                                    </span>
+                                    <input type="text" class="form-control text-center" runat="server" id="txtNombreTarjeta" />
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Tu Clave" runat="server" id="txtPwd" />
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            <input type="password" class="form-control" placeholder="Tu Clave" runat="server" id="txtPwd" />
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Repetir Contraseña</label>
-                        <input type="text" class="form-control" placeholder="Repetir Clave" runat="server" id="txtRPwd" />
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Repetir Clave" runat="server" id="txtRPwd" />
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
