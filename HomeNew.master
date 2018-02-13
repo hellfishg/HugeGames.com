@@ -10,55 +10,43 @@
     <meta name="description" content="HugeGames website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!--Theme-->
     <link rel="stylesheet" href="dist/css/animate.css">
     <link rel="stylesheet" href="dist/css/shards.min.css">
-    <link rel="stylesheet" href="dist/css/main-demo.min.css" />
+    <%--<link rel="stylesheet" href="dist/css/main-demo.min.css" />--%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap4.min.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="sticky-header active animated fadeInDown">
-            <div class="container">
-                <div class="row">
-                    <a href="HomeNew.aspx" class="logo">
-                        <h3 class="w-100">HugeGames</h3>
-                    </a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+            <img src="Imagenes/shards-logo.svg" alt="Huge Games" class="mr-2" height="30">
+            <a class="navbar-brand" href="HomeNew.aspx">Huge Games</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-2" aria-controls="navbarNavDropdown-2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown-2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="PacksNew.aspx"><i class="fa fa-cart-arrow-down"></i>&nbsp;Pack de ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CatalogoNew.aspx"><i class="fa fa-gamepad"></i>&nbsp;Catálogo de juegos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CarritoComprasNew.aspx"><i class="fa fa-shopping-cart"></i>&nbsp;Carrito de compras</a></li>
+                </ul>
+                <ul class="navbar-nav">
                     <% if (Usr.IsLoged)
-                        { %>
-                    <div class="ml-auto actions-wrapper">
-                        <div class="header-actions">
-                            <a href='<%= (Usr.Perfil == 1) ? "PerfilAdminNew.aspx" : "PerfilNew.aspx" %>' class="btn download btn-primary btn-pill"><i class="fa fa-user mr-1"></i>Mi Perfil</a>
-                            <button type="button" class="btn documentation btn-outline-light btn-pill ml-1" id="btnSesion" runat="server" onserverclick="btnSesion_ServerClick"><i class="fa fa-times mr-1"></i>Cerrar sesión</button>
-                        </div>
-                    </div>
-                    <%  }
-                        else
-                        { %>
-                    <div class="ml-auto actions-wrapper">
-                        <div class="header-actions">
-                            <asp:DropDownList runat="server" ID="ddlLogin" CssClass="custom-select" AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged"></asp:DropDownList>
-                        </div>
-                    </div>
-                    <% } %>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <a href="PacksNew.aspx"><i class="fa fa-cart-arrow-down"></i>&nbsp;Pack de ofertas</a>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <a href="CatalogoNew.aspx"><i class="fa fa-gamepad"></i>&nbsp;Catálogo de juegos</a>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <a href="CarritoComprasNew.aspx"><i class="fa fa-shopping-cart"></i>&nbsp;Carrito de compras</a>
-                    </div>
-                </div>
+                        {%>
+                    <li class="nav-item"><a href='<%= (Usr.Perfil == 1) ? "PerfilAdminNew.aspx" : "PerfilNew.aspx" %>' class="btn btn-light btn-pill"><i class="fa fa-user mr-1"></i>Mi Perfil</a></li>
+                    <li class="nav-item"><button type="button" class="btn btn-light btn-pill ml-1" id="btnSesion" runat="server" onserverclick="btnSesion_ServerClick"><i class="fa fa-times mr-1"></i>Cerrar sesión</button></li>
+                    <% }
+                    else
+                    { %>
+                    <li class="nav-item"><asp:DropDownList runat="server" ID="ddlLogin" CssClass="custom-select" AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged"></asp:DropDownList></li>
+                    <%} %>
+                </ul>
             </div>
-        </header>
+        </nav>
         <div class="page-content">
             <div class="content clearfix">
                 <div class="container animated fadeInUp">
@@ -67,17 +55,29 @@
                 </div>
             </div>
             <footer class="main-footer py-5">
-                <p class="text-muted text-center small p-0 mb-4">© Copyright 2017 — HugeGames</p>
-                <div class="social d-table ml-auto mr-auto"><a class="twitter mx-3 h4" href="#" target="_blank"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span> </a><a class="facebook mx-3 h4" href="#" target="_blank"><i class="fa fa-facebook"></i><span class="sr-only">Facebook <span></span></span></a><a class="github mx-3 h4" href="https://github.com/hellfishg/hugegames.com" target="_blank"><i class="fa fa-github"></i><span class="sr-only">Repositorio del proyecto</span></a></div>
+                <p class="text-muted text-center small p-0 mb-4">© Copyright 2018 — Huge Games</p>
+                <div class="social d-table mx-auto"><a class="twitter mx-3 h4 d-inline-block text-secondary" href="#" target="_blank"><i class="fa fa-twitter"></i><span class="sr-only">View our Twitter Profile</span> </a><a class="facebook mx-3 h4 d-inline-block text-secondary" href="#" target="_blank"><i class="fa fa-facebook"></i><span class="sr-only">View our Facebook Profile <span></span></span></a><a class="github mx-3 h4 d-inline-block text-secondary" href="https://github.com/hellfishg/hugegames.com" target="_blank"><i class="fa fa-github"></i><span class="sr-only">View our GitHub Profile</span></a></div>
             </footer>
         </div>
         <!--Scripts-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="dist/js/shards.min.js"></script>
-        <script src="dist/js/main.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+        <script src="https://cdn.datatables.net/plug-ins/1.10.13/sorting/datetime-moment.js"></script>
         <script>
             function showMessage(title, content, type) {
                 swal(
@@ -85,6 +85,54 @@
                     content,
                     type
                 )
+            }
+            //Setear plugin datatable a repeater
+            function rpDataTable(id) {
+                var table;
+
+                table = $('[id$=' + id + ']').DataTable({
+                    lengthChange: false,
+                    buttons: [
+                        { extend: 'copy', text: 'Copiar' },
+                        'csv', 'excel', 'pdf',
+                        { extend: 'print', text: 'Imprimir' }
+                    ],
+                    language: {
+                        buttons: {
+                            copyTitle: 'Copiado al portapapeles',
+                            copySuccess: {
+                                _: '%d lineas copiadas',
+                                1: '1 linea copiada'
+                            }
+                        }
+                    },
+                    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
+                    "aaSorting": []
+                });
+
+                table.buttons().container()
+                    .appendTo('#' + id + '_wrapper .col-md-6:eq(0)');
+            }
+            //Setear plugin datatable a gridview
+            function gvDataTable(id) {
+                $('[id$=' + id + ']').prepend($("<thead></thead>").append($('[id$=' + id + ']').find("tr:first"))).DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        { extend: 'copy', text: 'Copiar' },
+                        'csv', 'excel', 'pdf',
+                        { extend: 'print', text: 'Imprimir' }
+                    ],
+                    language: {
+                        buttons: {
+                            copyTitle: 'Copiado al portapapeles',
+                            copySuccess: {
+                                _: '%d lineas copiadas',
+                                1: '1 linea copiada'
+                            }
+                        }
+                    },
+                    "aaSorting": []
+                });
             }
         </script>
         <asp:ContentPlaceHolder ID="scripts" runat="server">

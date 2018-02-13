@@ -11,14 +11,18 @@
                     <div class="form-group">
                         <label>Usuario</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
                             <input type="email" class="form-control" placeholder="Tu usuario" runat="server" id="txtEmail" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            </div>
                             <input type="password" class="form-control" placeholder="Tu clave" runat="server" id="txtPwd" />
                         </div>
                     </div>

@@ -13,18 +13,22 @@
                     <div class="form-group">
                         <label>Usuario</label>
                         <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </span>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            </div>
                             <input type="text" class="form-control" placeholder="Tu Nombre" runat="server" id="txtUsuario" disabled="disabled" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
                         <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-envelope-o"></i>
-                            </span>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-envelope-o"></i>
+                                </span>
+                            </div>
                             <input type="email" class="form-control" placeholder="Tu Email" runat="server" id="txtEmail" />
                         </div>
                     </div>
@@ -33,9 +37,11 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-5">
                                 <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-credit-card"></i>
-                                    </span>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-credit-card"></i>
+                                        </span>
+                                    </div>
                                     <input type="text" class="form-control lead text-center font-weight-bold" runat="server" id="txtNumTarjeta" />
                                 </div>
                             </div>
@@ -44,9 +50,11 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-5">
                                 <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-credit-card-alt"></i>
-                                    </span>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-credit-card-alt"></i>
+                                        </span>
+                                    </div>
                                     <input type="text" class="form-control text-center" runat="server" id="txtNombreTarjeta" />
                                 </div>
                             </div>
@@ -55,18 +63,22 @@
                     <div class="form-group">
                         <label>Contraseña</label>
                         <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-lock"></i>
-                            </span>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
                             <input type="password" class="form-control" placeholder="Tu Clave" runat="server" id="txtPwd" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Repetir Contraseña</label>
                         <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-lock"></i>
-                            </span>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
                             <input type="text" class="form-control" placeholder="Repetir Clave" runat="server" id="txtRPwd" />
                         </div>
                     </div>

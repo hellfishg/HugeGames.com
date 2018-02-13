@@ -5,20 +5,24 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="row d-flex justify-content-center">
         <div class="col-md-8">
-            <div class="jumbotron jumbotron-fluid bg-dark text-white">
+            <div class="jumbotron jumbotron-fluid bg-light">
                 <div class="container">
-                    <h1 class="display-6 text-center mb-3 text-white">Inicia sesión como Administrador</h1>
+                    <h1 class="display-6 text-center mb-3">Inicia sesión como Administrador</h1>
                     <div class="form-group">
                         <label>Usuario</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
                             <input type="email" class="form-control" placeholder="Tu usuario" runat="server" id="txtEmail" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            </div>
                             <input type="password" class="form-control" placeholder="Tu clave" runat="server" id="txtPwd" />
                         </div>
                     </div>
