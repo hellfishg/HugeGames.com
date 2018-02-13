@@ -24,7 +24,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 animated fadeInDown">
             <img src="Imagenes/shards-logo.svg" alt="Huge Games" class="mr-2" height="30">
             <a class="navbar-brand" href="HomeNew.aspx">Huge Games</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-2" aria-controls="navbarNavDropdown-2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
