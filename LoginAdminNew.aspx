@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="jumbotron jumbotron-fluid bg-light">
                 <div class="container">
-                    <h1 class="display-6 text-center mb-3">Inicia sesión como Administrador</h1>
+                    <h1 class="display-6 text-center mb-3">Inicia sesión como <strong class="text-secondary">Administrador</strong></h1>
                     <div class="form-group">
                         <label>Usuario</label>
                         <div class="input-group">
