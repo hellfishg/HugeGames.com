@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <h5>Alta, Baja y Modificación de Juegos</h5>
-            <div class="card bg-light mb-2">
+            <div class="card bg-light mb-4">
                 <div class="card-header">
                     <h5>Datos del juego</h5>
                 </div>
@@ -87,13 +87,13 @@
                 </div>
                 <div class="card-footer"></div>
             </div>
-            <div class="card text-white bg-dark">
+            <div class="card bg-light">
                 <div class="card-header">
-                    <h5 class="text-white">Listado de juegos</h5>
+                    <h5>Listado de juegos</h5>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="tblJuegos" class="table table-dark">
+                        <table id="tblJuegos" class="table table-sm table-striped table-bordered bg-white">
                             <thead>
                                 <tr>
                                     <th></th>
