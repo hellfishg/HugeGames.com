@@ -15,50 +15,62 @@ public class clsDB
     }
 
 
-    public DataSet ExecuteSP(string strSP, ref string strRes, Dictionary<string, string> paramList = null)
-	{
-		var ds = new DataSet();
-		var da = new SqlDataAdapter();
-		try {
-			SqlConn = new SqlConnection(ConnString);
-			using (SqlConn) {
-				SqlCommand cmd = new SqlCommand(strSP);
-				cmd.Connection = SqlConn;
-				cmd.CommandType = CommandType.StoredProcedure;
-				da.SelectCommand = cmd;
-				if (paramList != null) {
-					foreach (var item in paramList) {
-						cmd.Parameters.AddWithValue("@" + item.Key, item.Value);
-					}
-				}
-				da.Fill(ds);
-				SqlConn.Close();
+    public DataSet ExecuteSP(string strSP, ref string strRes, Dictionary<string, dynamic> paramList = null)
+    {
+        var ds = new DataSet();
+        var da = new SqlDataAdapter();
+        try
+        {
+            SqlConn = new SqlConnection(ConnString);
+            using (SqlConn)
+            {
+                SqlCommand cmd = new SqlCommand(strSP);
+                cmd.Connection = SqlConn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand = cmd;
+                if (paramList != null)
+                {
+                    foreach (var item in paramList)
+                    {
+                        cmd.Parameters.AddWithValue("@" + item.Key, item.Value);
+                    }
+                }
+                da.Fill(ds);
+                SqlConn.Close();
 
-			}
+            }
 
-			int tableNumber = 0;
-			if (ds.Tables.Count == 0) {
-				tableNumber = 0;
-				//strRes = "OK"
-			} else {
-				tableNumber = ds.Tables.Count - 1;
-				//strRes = "OK"
-			}
+            int tableNumber = 0;
+            if (ds.Tables.Count == 0)
+            {
+                tableNumber = 0;
+                //strRes = "OK"
+            }
+            else
+            {
+                tableNumber = ds.Tables.Count - 1;
+                //strRes = "OK"
+            }
             int x;
-			if ((ds.Tables[tableNumber].Rows.Count > 0) && (int.TryParse(ds.Tables[tableNumber].Rows[0][0].ToString(), out x) || ds.Tables[tableNumber].Rows[0][0].ToString() != "ERROR")) {
-				strRes = "OK";
-				return ds;
-			} else {
-				ds = new DataSet();
-				ds.Tables.Add(new DataTable());
-				strRes = "ERROR";
-			}
-		} catch (Exception ex) {
+            if ((ds.Tables[tableNumber].Rows.Count > 0) && (int.TryParse(ds.Tables[tableNumber].Rows[0][0].ToString(), out x) || ds.Tables[tableNumber].Rows[0][0].ToString() != "ERROR"))
+            {
+                strRes = "OK";
+                return ds;
+            }
+            else
+            {
+                ds = new DataSet();
+                ds.Tables.Add(new DataTable());
+                strRes = "ERROR";
+            }
+        }
+        catch (Exception ex)
+        {
             clsLOG.generateError("clsDB - ExecuteSP ex: " + ex.Message);
-			strRes = "ERROR";
-		}
+            strRes = "ERROR";
+        }
         return ds;
-	}
+    }
 
     public DataSet ExecuteQuery(string strQuery, ref string strResult)
     {

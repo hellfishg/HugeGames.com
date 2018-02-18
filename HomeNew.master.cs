@@ -9,7 +9,7 @@ public partial class HomeNew : System.Web.UI.MasterPage
         if (!IsPostBack)
         {
             //Generamos un diccionario con las opciones para iniciar sesion
-            var lst = new Dictionary<string, string>()
+            var lst = new Dictionary<string, dynamic>()
             {
                 { "", "Seleccione una opción" },
                 { "LoginNew.aspx", "Iniciar Sesión" },

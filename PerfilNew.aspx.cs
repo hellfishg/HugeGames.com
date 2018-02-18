@@ -18,7 +18,7 @@ public partial class PerfilNew : System.Web.UI.Page
     {
         var objDB = new clsDB();
         string stResult = "OK";
-        var dic = new Dictionary<string, string>()
+        var dic = new Dictionary<string, dynamic>()
         {
             { "op", "get" },
             { "usuario", usr.User }
@@ -39,7 +39,7 @@ public partial class PerfilNew : System.Web.UI.Page
     {
         var objDB = new clsDB();
         string stResult = "";
-        var dic = new Dictionary<string, string>()
+        var dic = new Dictionary<string, dynamic>()
         {
             { "op", "update" }
         };

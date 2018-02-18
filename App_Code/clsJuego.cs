@@ -12,8 +12,8 @@ public class clsJuego
     public string ImagenChica { get; set; }
     public string Descripcion { get; set; }
     public string Requisitos { get; set; }
-    public decimal Precio { get; set; }
-    public int Borrado { get; set; }
+    public decimal? Precio { get; set; }
+    public int? Borrado { get; set; }
 
     public bool ABMJuego(string operation)
     {
@@ -22,18 +22,26 @@ public class clsJuego
             var objDB = new clsDB();
             string stResult = "";
 
-            var dic = new Dictionary<string, string>()
-            {
-                { "op", operation },
-                { "nombre", this.Nombre },
-                { "link", this.Link},
-                { "imagenGrande", this.ImagenGrande },
-                { "imagenChica", this.ImagenChica },
-                { "descripcion", this.Descripcion },
-                { "requisitos", this.Requisitos },
-                { "precio", this.Precio.ToString() },
-                { "borrado", this.Borrado.ToString() }
+            var dic = new Dictionary<string, dynamic>() {
+                { "operation", operation }
             };
+
+            dic.Add("nombre", this.Nombre);
+            if (!string.IsNullOrEmpty(this.Link))
+                dic.Add("link", this.Link);
+            if (!string.IsNullOrEmpty(this.ImagenGrande))
+                dic.Add("imagenGrande", this.ImagenGrande);
+            if (!string.IsNullOrEmpty(this.ImagenChica))
+                dic.Add("imagenChica", this.ImagenChica);
+            if (!string.IsNullOrEmpty(this.Descripcion))
+                dic.Add("descripcion", this.Descripcion);
+            if (!string.IsNullOrEmpty(this.Requisitos))
+                dic.Add("requisitos", this.Requisitos);
+            if (this.Precio != null)
+                dic.Add("precio", this.Precio);
+            if (this.Borrado != null)
+                dic.Add("borrado", this.Borrado);
+
 
             objDB.ExecuteSP("[UP_HG_Juegos_ABM]", ref stResult, dic);
 
@@ -53,7 +61,7 @@ public class clsJuego
             var objDB = new clsDB();
             string stResult = "";
 
-            var dic = new Dictionary<string, string>();
+            var dic = new Dictionary<string, dynamic>();
             dic.Add("op", "get");
             dic.Add("nombre", nombre);
 
@@ -87,7 +95,7 @@ public class clsJuego
         {
             var objDB = new clsDB();
 
-            var dic = new Dictionary<string, string>();
+            var dic = new Dictionary<string, dynamic>();
             dic.Add("op", "con");
 
             ds = objDB.ExecuteSP("[UP_HG_Juegos_Consultar]", ref stResult, dic);

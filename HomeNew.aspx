@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
         .hometron{
-            height:40em;
+            height:38em;
         }
     </style>
 </asp:Content>

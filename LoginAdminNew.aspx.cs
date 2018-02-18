@@ -13,7 +13,7 @@ public partial class LoginAdminNew : System.Web.UI.Page
         var objDB = new clsDB();
         string stResult = "";
 
-        var dic = new Dictionary<string, string>()
+        var dic = new Dictionary<string, dynamic>()
         {
             { "usuario", txtEmail.Value },
             { "pwd", txtPwd.Value }

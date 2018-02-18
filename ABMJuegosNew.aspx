@@ -77,15 +77,26 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label>Requisitos</label>
+                            <textarea id="txtRequisitos" runat="server" class="form-control" placeholder="Requisitos del juego" rows="3" />
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="custom-control custom-toggle my-2">
                                 <input type="checkbox" id="chkBorrado" runat="server" name="chkBorrado" class="custom-control-input">
                                 <label class="custom-control-label" for='<%= chkBorrado.ClientID %>'>Borrado</label>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary float-right" runat="server" id="btnGuardar" onserverclick="btnGuardar_ServerClick"><i class="fa fa-download"></i>&nbsp;Guardar&nbsp;<%= (hfExiste.Value == "0") ? "nuevo" : "cambios" %></button>
+                        </div>
                     </div>
                 </div>
-                <div class="card-footer"></div>
+                <div class="card-footer">
+                    <asp:HiddenField ID="hfExiste" runat="server" Value="0" />
+                </div>
             </div>
             <div class="card bg-light">
                 <div class="card-header">
