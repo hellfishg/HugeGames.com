@@ -31,7 +31,7 @@
                                         <i class="fa fa-link"></i>
                                     </span>
                                 </div>
-                                <input type="text" id="txtLink" runat="server" class="form-control" placeholder="www.youtube.com/embed/{id del video}" />
+                                <input type="text" id="txtLink" runat="server" class="form-control" placeholder="http://www.youtube.com/embed/{id del video}" />
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                                         <i class="fa fa-picture-o"></i>
                                     </span>
                                 </div>
-                                <input type="text" id="txtImgGrande" runat="server" class="form-control" placeholder="via.placeholder.com/1280x720" />
+                                <input type="text" id="txtImgGrande" runat="server" class="form-control" placeholder="http://via.placeholder.com/1280x720" />
                             </div>
                         </div>
                         <div class="col-md-6 form-group">
@@ -55,7 +55,7 @@
                                         <i class="fa fa-picture-o"></i>
                                     </span>
                                 </div>
-                                <input type="text" id="txtImgChica" runat="server" class="form-control" placeholder="via.placeholder.com/800x500" />
+                                <input type="text" id="txtImgChica" runat="server" class="form-control" placeholder="http://via.placeholder.com/800x500" />
                             </div>
                         </div>
                     </div>
