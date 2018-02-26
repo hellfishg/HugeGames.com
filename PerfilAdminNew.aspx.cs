@@ -6,11 +6,12 @@ public partial class PerfilAdminNew : System.Web.UI.Page
     private clsUsuario usr;
     protected void Page_Load(object sender, EventArgs e)
     {
+        usr = (clsUsuario)Session["sUser"];
+        if (usr == null) Response.Redirect("LoginNew.aspx");
+        if (usr.Perfil == 2) Response.Redirect("PerfilNew.aspx");
+
         if (!IsPostBack)
         {
-            usr = (clsUsuario)Session["sUser"];
-            if (usr == null) Response.Redirect("LoginNew.aspx");
-            if (usr.Perfil == 2) Response.Redirect("PerfilNew.aspx");
             cargarDatosUsuario();
         }
     }

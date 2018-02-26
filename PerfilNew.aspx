@@ -79,7 +79,7 @@
                                     <i class="fa fa-lock"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Repetir Clave" runat="server" id="txtRPwd" />
+                            <input type="password" class="form-control" placeholder="Repetir Clave" runat="server" id="txtRPwd" />
                         </div>
                     </div>
                 </div>

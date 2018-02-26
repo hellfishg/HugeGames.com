@@ -6,6 +6,9 @@ public partial class HomeNew : System.Web.UI.MasterPage
     public clsUsuario Usr = new clsUsuario();
     protected void Page_Load(object sender, EventArgs e)
     {
+        var user = Session["sUser"] as clsUsuario;
+        if (user != null) Usr = user;
+
         if (!IsPostBack)
         {
             //Generamos un diccionario con las opciones para iniciar sesion
@@ -21,13 +24,6 @@ public partial class HomeNew : System.Web.UI.MasterPage
             ddlLogin.DataTextField = "Value";
             ddlLogin.DataValueField = "Key";
             ddlLogin.DataBind();
-        }
-
-        var session = Session["sUser"];
-
-        if (session != null)
-        {
-            Usr = (clsUsuario)session;
         }
     }
 

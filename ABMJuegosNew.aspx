@@ -115,7 +115,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <asp:Repeater ID="gvJuegos" runat="server" OnItemCommand="gvJuegos_ItemCommand">
+                                <asp:Repeater ID="rpJuegos" runat="server" OnItemCommand="rpJuegos_ItemCommand">
                                     <ItemTemplate>
                                         <tr>
                                             <th>
@@ -129,7 +129,6 @@
                                 </asp:Repeater>
                             </tbody>
                         </table>
-                        <%--<asp:GridView ID="gvJuegos" runat="server" CssClass="table table-striped table-bordered text-dark"></asp:GridView>--%>
                     </div>
                 </div>
                 <div class="card-footer"></div>

@@ -1,0 +1,19 @@
+	<div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 id="h3#GRAPH_00"">TITLE#GRAPH_00</h4>
+                </div>
+                <div class="card-body report-chart">
+                    <div class="chart">
+                        <canvas id="TYPE#GRAPH_00"></canvas>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="card-footer">
+                    <div class="col-md-2">
+                        <button type="button" id="barButton#GRAPH_00" class="btn btn-sm btn-block btn-primary">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>

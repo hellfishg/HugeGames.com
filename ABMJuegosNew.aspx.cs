@@ -5,11 +5,12 @@ public partial class ABMJuegosNew : System.Web.UI.Page
     private clsUsuario usr;
     protected void Page_Load(object sender, EventArgs e)
     {
+        usr = Session["sUser"] as clsUsuario;
+        if (usr == null) Response.Redirect("LoginNew.aspx");
+        if (usr.Perfil == 2) Response.Redirect("PerfilNew.aspx");
+
         if (!IsPostBack)
         {
-            usr = (clsUsuario)Session["sUser"];
-            if (usr == null) Response.Redirect("LoginNew.aspx");
-            if (usr.Perfil == 2) Response.Redirect("PerfilNew.aspx");
             cargarJuegos();
         }
     }
@@ -21,12 +22,12 @@ public partial class ABMJuegosNew : System.Web.UI.Page
 
         if (stResult == "OK")
         {
-            gvJuegos.DataSource = juegos;
-            gvJuegos.DataBind();
+            rpJuegos.DataSource = juegos;
+            rpJuegos.DataBind();
         }
     }
 
-    protected void gvJuegos_ItemCommand(object source, System.Web.UI.WebControls.RepeaterCommandEventArgs e)
+    protected void rpJuegos_ItemCommand(object source, System.Web.UI.WebControls.RepeaterCommandEventArgs e)
     {
         if (e.CommandName == "Editar")
         {

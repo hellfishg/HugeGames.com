@@ -1,0 +1,105 @@
+        <script>
+            $(function () {
+                //-------------
+                //- BAR CHART -
+                //-------------
+                //#GRAPH_00 $(".card-footer").remove();
+				//#GRAPH_00	$('#h3#GRAPH_00').text( function( index, val ) {
+				//#GRAPH_00		var text = $('[id$=hfParameter]').val();
+				//#GRAPH_00		console.log(text);
+				//#GRAPH_00		if(text.length > 0){
+				//#GRAPH_00			return val + " - " + text;
+				//#GRAPH_00	        console.log(val + " - " + text)
+				//#GRAPH_00		}
+				//#GRAPH_00	});
+
+                // Get data from codebehind (string joined with ;)
+                var dataColor#GRAPH_00 = "@ColorString#GRAPH_00";
+                var vColor#GRAPH_00 = dataColor#GRAPH_00.split("|");
+                var dataData#GRAPH_00 = "@DataString#GRAPH_00";
+                var vString#GRAPH_00 = dataData#GRAPH_00.split("|");
+                var dataLabel#GRAPH_00 = "@LabelsString#GRAPH_00";
+                var vLabel#GRAPH_00 = dataLabel#GRAPH_00.split(",");
+                var dataSetValue#GRAPH_00 = [];
+                var count#GRAPH_00 = $("[id$=hfDatos#GRAPH_00]").val();
+                for (i = 0; i < count#GRAPH_00 ; i++) {
+                    dataSetValue#GRAPH_00[i] = {
+                        label: vLabel#GRAPH_00[i],
+                    backgroundColor: vColor#GRAPH_00,
+                    data: vString#GRAPH_00
+					}
+				}
+				var barChartData#GRAPH_00 = {
+					labels: [@ColumnasString#GRAPH_00],
+					datasets: dataSetValue#GRAPH_00
+				};
+				var barChartOptions#GRAPH_00 = {
+					//Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+					scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero:true,
+								callback: function(value, index, values) {
+									if (Math.floor(value) === value) {
+										return value;
+									}
+								}
+							}
+						}],
+            xAxes: [{
+              ticks: {
+              min: 0,
+              stepSize: 1,
+              autoSkip: false,
+              maxRotation: 90,
+              minRotation: 70
+              }
+            }]
+					},
+					//Boolean - Whether grid lines are shown across the chart
+					scaleShowGridLines: true,
+					//String - Colour of the grid lines
+					scaleGridLineColor: "rgba(0,0,0,.05)",
+					//Number - Width of the grid lines
+					scaleGridLineWidth: 1,
+					//Boolean - Whether to show horizontal lines (except X axis)
+					scaleShowHorizontalLines: true,
+					//Boolean - Whether to show vertical lines (except Y axis)
+					scaleShowVerticalLines: true,
+					//Boolean - If there is a stroke on each bar
+					barShowStroke: true,
+					//Number - Pixel width of the bar stroke
+					barStrokeWidth: 2,
+					//Number - Spacing between each of the X value sets
+					barValueSpacing: 5,
+					//Number - Spacing between data sets within X values
+					barDatasetSpacing: 1,
+					//Boolean - whether to make the chart responsive
+					responsive: true,
+					maintainAspectRatio: true,
+					//Legend?
+					legend: {display: false}
+				};
+				var barChartCanvas#GRAPH_00 = $("#barChart#GRAPH_00").get(0).getContext("2d");
+				var barChart#GRAPH_00 = new Chart(barChartCanvas#GRAPH_00,{
+					type: 'bar',
+					data: barChartData#GRAPH_00,
+					options: barChartOptions#GRAPH_00
+				});
+				$("#barButton#GRAPH_00").click(function (){
+					window.location.href = "LINK#GRAPH_00"
+				});
+				//#GRAPH_00 document.getElementById("barChart#GRAPH_00").onclick = function(evt){
+				//#GRAPH_00	var activePoints#GRAPH_00 = barChart#GRAPH_00.getElementsAtEvent(evt);
+				//#GRAPH_00	var firstPoint#GRAPH_00 = activePoints#GRAPH_00[0];
+				//#GRAPH_00	var label#GRAPH_00 = barChart#GRAPH_00.data.labels[firstPoint#GRAPH_00._index];
+				//#GRAPH_00	var value#GRAPH_00 = barChart#GRAPH_00.data.datasets[firstPoint#GRAPH_00._datasetIndex].data[firstPoint#GRAPH_00._index];
+				//#GRAPH_00	if (firstPoint#GRAPH_00 !== undefined){
+				//#GRAPH_00		$('[id$=hfParameter]').val(label#GRAPH_00);
+				//#GRAPH_00		__doPostBack();
+				//#GRAPH_00		}
+				//#GRAPH_00 };
+			});
+        </script>
+        <input type="hidden" id="hfDatos#GRAPH_00" value="xx#GRAPH_00" />
+        <input type="hidden" id="hfOrden#GRAPH_00" value="zz#GRAPH_00" />

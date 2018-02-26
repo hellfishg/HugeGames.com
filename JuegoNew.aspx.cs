@@ -3,8 +3,12 @@ using System.Collections.Generic;
 
 public partial class CarritoComprasNew : System.Web.UI.Page
 {
+    public clsUsuario Usr = new clsUsuario();
     protected void Page_Load(object sender, EventArgs e)
     {
+        var user = Session["sUser"] as clsUsuario;
+        if (user != null) Usr = user;
+
         if (!IsPostBack)
         {
             cargarJuego();
@@ -13,14 +17,22 @@ public partial class CarritoComprasNew : System.Web.UI.Page
 
     private void cargarJuego()
     {
-        var db = new clsDB();
-        string stResult = "";
-        var ds = db.ExecuteQuery("SELECT * FROM Juegos WHERE Nombre_JUE = '" + Request.QueryString["game"].Replace("%20", " ") + "'", ref stResult);
-
-        if (stResult == "OK")
+        string nombre = Request.QueryString["game"].Replace("%20", " ");
+        if (!string.IsNullOrEmpty(nombre))
         {
-            rpJuego.DataSource = ds;
-            rpJuego.DataBind();
+            var db = new clsDB();
+            string stResult = "";
+            var ds = db.ExecuteQuery("SELECT * FROM Juegos WHERE Nombre_JUE = '" + nombre + "'", ref stResult);
+
+            if (stResult == "OK")
+            {
+                rpJuego.DataSource = ds;
+                rpJuego.DataBind();
+            }
+        }
+        else
+        {
+            Response.Redirect("CatalogoNew.aspx");
         }
     }
 

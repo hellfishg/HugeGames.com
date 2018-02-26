@@ -15,14 +15,16 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item"><i class="fa fa-gamepad"></i>&nbsp;Juego 1&nbsp;&nbsp;<i class="fa fa-usd"></i>500</li>
-                        <li class="list-group-item"><i class="fa fa-gamepad"></i>&nbsp;Pack 2&nbsp;&nbsp;<i class="fa fa-usd"></i>400</li>
-                        <li class="list-group-item"><i class="fa fa-gamepad"></i>&nbsp;Juego 3&nbsp;&nbsp;<i class="fa fa-usd"></i>200</li>
+                        <asp:Repeater runat="server" ID="rpCarrito" OnItemCommand="rpCarrito_ItemCommand">
+                            <ItemTemplate>
+                                <li class="list-group-item"><i class="fa fa-gamepad"></i>&nbsp;<%# Eval("Nombre") %>&nbsp;&nbsp;<i class="fa fa-usd"></i><%# Eval("Precio") %>
+                                    <asp:LinkButton runat="server" CommandName="Eliminar" OnClientClick="deleteAlert(this, event, 'el juego')"><i class="float-right fa fa-times"></i></asp:LinkButton></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
                 <div class="card-footer">
-                    <button type="button" class="btn btn-primary btn-sm pull-right"><i class="fa fa-shopping-cart"></i></button>
-                  
+                    <asp:LinkButton runat="server" ID="btnComprar" CssClass="btn btn-primary btn-sm pull-right" OnClick="btnComprar_Click"><i class="fa fa-shopping-cart"></i>&nbsp;Realizar compra</asp:LinkButton>
                 </div>
             </div>
         </div>
