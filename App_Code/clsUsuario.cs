@@ -15,5 +15,6 @@ public class clsUsuario
     public clsUsuario()
     {
         IsLoged = false;
+        Perfil = 0;
     }
 }

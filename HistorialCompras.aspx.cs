@@ -8,6 +8,7 @@ public partial class HistorialCompras : System.Web.UI.Page
     {
         usr = (clsUsuario)Session["sUser"];
         if (usr == null) Response.Redirect("LoginNew.aspx");
+        if (usr.Perfil == 1) Response.Redirect("LoginNew.aspx");
 
         if (!IsPostBack)
         {
