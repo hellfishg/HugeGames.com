@@ -14,7 +14,7 @@ public partial class CatalogoNew : System.Web.UI.Page
     {
         var db = new clsDB();
         string stResult = "";
-        var ds = db.ExecuteQuery("select * from Juegos", ref stResult);
+        var ds = db.ExecuteQuery("select * from Juegos where Borrado_JUE = 0", ref stResult);
 
         if (stResult == "OK")
         {
