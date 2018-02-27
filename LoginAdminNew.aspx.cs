@@ -35,7 +35,7 @@ public partial class LoginAdminNew : System.Web.UI.Page
             };
 
             Session["sUser"] = usr;
-            Response.Redirect("CatalogoNew.aspx");
+            Response.Redirect("ABMJuegosNew.aspx");
         }
     }
 }
