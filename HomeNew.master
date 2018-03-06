@@ -38,6 +38,7 @@
                             { %>
                         <li class="nav-item"><a class="nav-link" href="ABMJuegosNew.aspx"><i class="fa fa-pencil"></i>&nbsp;ABM de juegos</a></li>
                         <li class="nav-item"><a class="nav-link" href="ReporteCompras.aspx"><i class="fa fa-area-chart"></i>&nbsp;Reporte de compras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="CatalogoNew.aspx"><i class="fa fa-gamepad"></i>&nbsp;Catálogo de juegos</a></li>
                         <%}
                             if (Usr.Perfil != 1)
                             {%>

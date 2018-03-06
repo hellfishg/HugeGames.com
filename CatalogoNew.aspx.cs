@@ -7,7 +7,7 @@ public partial class CatalogoNew : System.Web.UI.Page
     {
         var usuario = Session["sUser"] as clsUsuario;
         if (usuario != null) usr = usuario;
-        if (usr.Perfil == 1) Response.Redirect("LoginNew.aspx");
+       // if (usr.Perfil == 1) Response.Redirect("LoginNew.aspx");
 
         if (!IsPostBack)
         {

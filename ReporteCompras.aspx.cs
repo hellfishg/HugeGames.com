@@ -67,6 +67,18 @@ public partial class ReporteCompras : System.Web.UI.Page
         collectParam();
     }
 
+    protected void  btnLimpiar_Click (object sender, EventArgs e)
+    {
+        var param = new Dictionary<string, dynamic>();
+        if (hfChangeGrid != null && hfChangeGrid.Value != "0")
+        {
+            param.Add("force", hfChangeGrid.Value);
+        }
+
+        cargarGraficos(param);
+        cargarGrilla(param);
+    }
+
     private void collectParam()
     {
         var param = new Dictionary<string, dynamic>();

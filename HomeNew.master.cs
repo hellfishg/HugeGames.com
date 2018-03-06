@@ -15,7 +15,8 @@ public partial class HomeNew : System.Web.UI.MasterPage
             var lst = new Dictionary<string, dynamic>()
             {
                 { "", "Seleccione una opción" },
-                { "LoginNew.aspx", "Iniciar Sesión" },
+                { "CreateUserNew.aspx", "Crear Usuario" },
+                { "LoginNew.aspx", "Iniciar Sesión Usuario" },
                 { "LoginAdminNew.aspx", "Iniciar Sesión Administrador" }
             };
 

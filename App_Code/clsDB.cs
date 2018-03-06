@@ -90,7 +90,49 @@ public class clsDB
 
                 da.Fill(ds);
 
-                strResult = "OK";
+                strResult = "OK"; 
+                
+                da.Dispose();
+                cmd.Dispose();
+                SqlConn.Close();
+                SqlConn.Dispose();
+            }
+
+        }
+
+        catch (Exception ex)
+        {
+            strResult = ex.Message;
+        }
+
+        return ds;
+    }
+
+    public DataSet ExecuteQuery2(string strQuery, ref string strResult)
+    {
+
+        var ds = new DataSet();
+        var da = new SqlDataAdapter();
+        try
+        {
+            SqlConn = new SqlConnection(ConnString);
+            using (SqlConn)
+            {
+                SqlCommand cmd = new SqlCommand(strQuery);
+                cmd.Connection = SqlConn;
+                cmd.CommandType = CommandType.Text;
+                da.SelectCommand = cmd;
+
+
+                da.Fill(ds);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    strResult = "OK";
+                }
+
+                else
+                    strResult = "ERROR";
 
                 da.Dispose();
                 cmd.Dispose();
@@ -99,6 +141,7 @@ public class clsDB
             }
 
         }
+
         catch (Exception ex)
         {
             strResult = ex.Message;

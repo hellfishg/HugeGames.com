@@ -35,8 +35,11 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-6">
                                 <asp:Button CssClass="btn btn-success pull-left" ID="btnConfirmar" OnClientClick="cleanParam();" runat="server" Text="Filtrar" OnClick="btnConfirmar_Click" />
+                            </div>
+                            <div class="col-sm-6">
+                                <asp:Button CssClass="btn btn-success pull-left" ID="btnLimpiar" OnClientClick="cleanParam();" runat="server" Text="Limpiar" OnClick="btnLimpiar_Click" />
                             </div>
                         </div>
                     </div>
