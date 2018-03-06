@@ -1,8 +1,7 @@
-﻿<asp:content id="Content1" contentplaceholderid="head" runat="Server">
-</asp:content>
-<asp:content id="Content2" contentplaceholderid="ContentPlaceHolder1" runat="Server">
+﻿<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="row">
-        
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -14,7 +13,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="http://via.placeholder.com/800x500" alt="Card image cap">
                                 <div class="card-body">
-                                    <h6 class="card-title">Pepe Lui</h6>
+                                    <h6 class="card-title">Super Mario 3</h6>
                                 </div>
                             </div>
                         </div><%@ Page Title="" Language="C#" MasterPageFile="~/HomeNew.master" AutoEventWireup="true" CodeFile="PacksNew.aspx.cs" Inherits="PacksNew" %>
@@ -58,7 +57,6 @@
                 </div>
             </div>
         </div>
-       
     </div>
 
     <div class="row">
@@ -174,7 +172,7 @@
         </div>
     </div>
 
-</asp:content>
+</asp:Content>
 
-<asp:content id="Content3" contentplaceholderid="scripts" runat="Server">
-</asp:content>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="Server">
+</asp:Content>
