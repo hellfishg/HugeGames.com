@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <asp:Repeater ID="rpJuegos" runat="server">
+                <asp:Repeater ID="rpJuegos" runat="server" >
                     <ItemTemplate>
                         <div class="col-md-4 col-sm-2">
                             <div class="card mb-3">
