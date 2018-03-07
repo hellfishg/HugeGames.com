@@ -7,8 +7,12 @@ using System.Web.UI.WebControls;
 
 public partial class PacksNew : System.Web.UI.Page
 {
+    public clsUsuario Usr = new clsUsuario();
     protected void Page_Load(object sender, EventArgs e)
     {
+        var user = Session["sUser"] as clsUsuario;
+        if (user != null) Usr = user;
+
         if (!IsPostBack)
         {
             cargarJuego();
@@ -57,5 +61,25 @@ public partial class PacksNew : System.Web.UI.Page
         }
     }
 
+    protected void rpJuego_ItemCommand(object source, System.Web.UI.WebControls.RepeaterCommandEventArgs e)
+    {
+        if (e.CommandName == "Carrito")
+        {
+            var carrito = Session["sCarrito"] as List<clsJuego>;
 
+            if (carrito == null)
+            {
+                carrito = new List<clsJuego>();
+            }
+
+            var juego = clsJuego.ObtenerJuego(e.CommandArgument.ToString());
+
+            carrito.Add(juego);
+            Session["sCarrito"] = carrito;
+
+            var utilJS = new clsUtilityJS(this);
+
+            utilJS.swal("Aviso", "Item agregado al carrito", "success");
+        }
+    }
 }

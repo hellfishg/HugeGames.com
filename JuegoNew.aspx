@@ -24,7 +24,7 @@
                         <div class="card-footer">
                             <% if (Usr.IsLoged && Usr.Perfil != 1)
                                 { %>
-                            <asp:LinkButton runat="server" CssClass="btn btn-primary btn-sm pull-right" CommandName="Carrito" CommandArgument='<%# Eval("Nombre_JUE") %>'><i class="fa fa-shopping-cart"></i></asp:LinkButton>
+                            <asp:LinkButton runat="server" CssClass="btn btn-primary btn-sm pull-right" CommandName="Carrito" CommandArgument='Pack 1'><i class="fa fa-shopping-cart"></i></asp:LinkButton>
                             <% } %>
                             <span class="pull-right">Precio&nbsp;<i class="fa fa-dollar"></i><%# Eval("Precio_JUE") %>&nbsp;</span>
                         </div>
